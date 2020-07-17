@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 echo "Pushing tags to origin..."
 git push --tags origin

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 echo "🚀 Publishing to NFSN..."
 git push origin

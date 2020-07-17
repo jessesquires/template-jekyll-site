@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 echo '⬇️  Pulling changes from GitHub'
 git pull github master
