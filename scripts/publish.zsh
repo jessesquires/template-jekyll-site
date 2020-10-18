@@ -1,9 +1,11 @@
 #!/bin/zsh
 
-echo "🚀 Publishing to NFSN..."
+# pushes changes to NearlyFreeSpeech.net and pushes to GitHub mirror
+
+echo "🚀  Publishing to NFSN..."
 git push origin
 
-echo "🚀 Pushing to GitHub..."
+echo "🚀  Pushing to GitHub..."
 git push github
 
-echo ""
+echo "🌈  Done!"
