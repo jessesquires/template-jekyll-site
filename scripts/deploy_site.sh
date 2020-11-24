@@ -3,6 +3,8 @@
 # post-receive git hook
 # should be copied to .git/hooks/post-receive in bare repo on server
 
+set -e
+
 export GEM_HOME=/home/private/.gem
 
 SITE_CHECKOUT=$HOME/site_checkout
@@ -24,7 +26,8 @@ echo '⏩  git status'
 git --git-dir=$GIT_DIR status
 
 echo '🛠  bundle install'
-bundle install
+gem install bundler --no-document
+bundle install --jobs 4 --retry 3
 
 echo '🛠  jekyll build'
 bundle exec jekyll build --destination $PUBLIC_WWW
