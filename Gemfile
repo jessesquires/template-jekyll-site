@@ -7,5 +7,5 @@ gem 'jekyll-sitemap'
 # gem 'jekyll-paginate'
 # gem 'jekyll-paginate-v2'
 
-gem 'danger'
+gem 'danger', '~> 8.0'
 gem 'danger-prose'
