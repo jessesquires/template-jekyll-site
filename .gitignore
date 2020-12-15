@@ -2,7 +2,7 @@
 
 # ruby
 .bundle/
-vendor/bundle
+vendor/
 
 # jekyll
 .jekyll-cache
