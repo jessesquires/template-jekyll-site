@@ -33,8 +33,12 @@ pub:
 
 .PHONY: tags
 tags:
-	./scripts/tag_and_publish.zsh $(TAG)
+	./scripts/tag_and_publish.zsh $(tag)
 
 .PHONY: deploy-github
 deploy-github:
 	./scripts/deploy_github.zsh
+
+.PHONY: image-optim
+image-optim:
+	./scripts/imageoptim.zsh $(files)
