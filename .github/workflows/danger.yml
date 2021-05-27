@@ -8,7 +8,7 @@ on:
     types: [synchronize, opened, reopened, labeled, unlabeled, edited]
 
 jobs:
-  job-main:
+  main:
     name: Review and Lint
     runs-on: ubuntu-latest
     steps:
