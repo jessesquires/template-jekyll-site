@@ -1,17 +1,19 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
-    <a class="navbar-brand branded" href="/">{{ site.title }}</a>
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">{{ site.title }}</a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="navbar-collapse collapse" id="navbar">
-        <ul class="navbar-nav">
-            <li class="nav-item mr-2">
-                <a class="nav-link {% if page.url == '/home/' %}active{% endif %}" href="/home/">home</a>
-            </li>
-            <li class="nav-item mr-2">
-                <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="/about/">about</a>
-            </li>
-        </ul>
-    </div>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item mx-1">
+                    <a class="nav-link {% if page.url == '/home/' %}active{% endif %}" href="/home/">home</a>
+                </li>
+                <li class="nav-item mx-1">
+                    <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" href="/about/">about</a>
+                </li>
+            </ul>
+        </div> <!-- navbar -->
+    </div> <!-- container -->
 </nav>

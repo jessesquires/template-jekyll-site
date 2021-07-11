@@ -3,37 +3,40 @@ layout: null
 ---
 
 {
-    "version": "https://jsonfeed.org/version/1",
+    "version": "https://jsonfeed.org/version/1.1",
     "title": "{{ site.title }}",
     "home_page_url": "{{ site.url }}",
-    "feed_url": "{{ site.url }}{{ site.feeds.json }}",
+    "feed_url": "{{ site.feeds.json | absolute_url }}",
     "description": "{{ site.description }}",
-    "icon": "{{ site.url }}{{ site.logo }}",
-    "favicon": "{{ site.url }}/favicon.ico",
+    "icon": "{% link_absolute {{ site.logo | img_url }} %}",
+    "favicon": "{{ site.favicon | absolute_url }}",
     "expired": false,
-    "author": {
-        "name": "{{ site.author.name }}",
-        "url": "{{ site.url }}",
-        "avatar": "{{ site.url }}{{ site.author.avatar }}"
-    },
-    "items": [
-        {% for post in site.posts %}
+    "language": "en-US",
+    "authors": [
         {
-            "id": "{{ post.url | absolute_url | sha1 }}",
-            "url": "{{ site.url }}{{ post.url }}",
-            "title": {{ post.title | jsonify }},
-            "date_published": "{{ post.date | date_to_xmlschema }}",
-            {% if post.date-updated %}
-            "date_modified": "{{ post.date-updated | date_to_xmlschema }}",
+            "name": "{{ site.author.name }}",
+            "url": "{{ site.url }}",
+            "avatar": "{% link_absolute {{ site.author.avatar | img_url }} %}"
+        }
+    ],
+    "items": [
+        {% for post in site.posts limit: site.feeds.limit %}
+        {
+            "id": "{{ post.url | absolute_url }}",
+            "url": "{{ post.url | absolute_url }}",
+            {% if post.subtitle %}
+                {% assign title = post.title | append: ": " | append: post.subtitle %}
             {% else %}
-            "date_modified": "{{ post.date | date_to_xmlschema }}",
+                {% assign title = post.title %}
             {% endif %}
-            "author": {
-                "name": "{{ site.author.name }}",
-                "url": "{{ site.url }}",
-                "avatar": "{{ site.url }}{{ site.author.avatar }}"
-            },
+            "title": {{ title | jsonify }},
+            "date_published": "{{ post.date | date_to_xmlschema }}",
+            "date_modified": "{{ post.date-updated | default: post.date | date_to_xmlschema }}",
             "summary": {{ post.excerpt | jsonify }},
+            "tags": [
+                {% for tag in post.tags %}"{{ tag }}",{% endfor %}
+                {% for category in post.categories %}"{{ category }}"{% endfor %}
+            ],
             "content_html": {{ post.content | jsonify }}
         }{% if forloop.last == false %},{% endif %}
         {% endfor %}

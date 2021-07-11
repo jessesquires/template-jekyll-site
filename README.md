@@ -13,7 +13,7 @@ This setup mostly assumes that you are [building a site with Jekyll on NearlyFre
 ## Requirements
 
 - [Bundler](https://bundler.io)
-- [Yarn](https://yarnpkg.com/en/)
+- [NPM](https://www.npmjs.com)
 
 ## Dependencies
 
@@ -23,11 +23,22 @@ This setup mostly assumes that you are [building a site with Jekyll on NearlyFre
 - [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
 - [jekyll-paginate](https://github.com/jekyll/jekyll-paginate) or [jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2)
 
-### Yarn
+#### Updating Gems
 
-- [Bootstrap](https://getbootstrap.com) ([pkg](https://yarnpkg.com/en/package/bootstrap))
-- [jQuery](https://jquery.com) ([pkg](https://yarnpkg.com/en/package/jquery))
-- [Font Awesome](https://fortawesome.github.io/Font-Awesome/) ([pkg](https://yarnpkg.com/en/package/font-awesome))
+```bash
+$ make update-bundle
+```
+
+### NPM packages
+
+- [Bootstrap](https://getbootstrap.com) ([package](https://www.npmjs.com/package/bootstrap))
+- [Bootstrap Icons](https://icons.getbootstrap.com) ([package](https://www.npmjs.com/package/bootstrap-icons))
+
+#### Updating packages
+
+```bash
+$ make update-deps
+```
 
 ## License
 

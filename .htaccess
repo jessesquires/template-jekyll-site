@@ -1,15 +1,34 @@
-# custom error pages
+# -----------------
+# custom error page
+# -----------------
 
 ErrorDocument 404 /404.html
 
+# -------------
 # cache-control
+# -------------
 
-# one month for images and fonts
-<filesMatch ".(jpg|jpeg|png|gif|ico|tff|svg|eot|woff|woff2)$">
+# one week for css and js assets
+<filesMatch "\.(css|js)$">
+Header set Cache-Control "max-age=604800, public"
+</filesMatch>
+
+# two weeks for images
+<filesMatch "\.(jpg|jpeg|png|gif|ico)$">
+Header set Cache-Control "max-age=1209600, public"
+</filesMatch>
+
+# one month for fonts
+<filesMatch "\.(ttf|svg|eot|woff|woff2)$">
 Header set Cache-Control "max-age=2628000, public"
 </filesMatch>
 
-# one week for css and js assets
-<filesMatch ".(css|js)$">
-Header set Cache-Control "max-age=604800, public"
+# one month for html
+<filesMatch "\.(html)$">
+Header set Cache-Control "max-age=2628000, public"
+</filesMatch>
+
+# never for archives or feeds (xml, json)
+<filesMatch "\.(zip|tar|dmg|xml|json)$">
+Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate, public"
 </filesMatch>
