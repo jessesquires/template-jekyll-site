@@ -40,6 +40,42 @@ $ make update-bundle
 $ make update-deps
 ```
 
+## Usage
+
+### Installation
+
+```bash
+$ git clone https://github.com/jessesquires/template-jekyll-site
+$ cd template-jekyll-site/
+$ make install
+```
+
+### Building the site
+
+```bash
+$ make
+```
+
+### Previewing the site locally
+
+```bash
+$ make preview
+```
+
+## Validation
+
+### Feeds
+- https://validator.w3.org/feed/
+- https://json-feed-validator.herokuapp.com
+
+### Markup
+- https://validator.w3.org/nu/
+
+### Structured Data
+- https://cards-dev.twitter.com/validator
+- https://www.opengraphcheck.com
+- https://search.google.com/structured-data/testing-tool
+
 ## License
 
 This work is released under the [CC0 1.0 Universal (CC0 1.0) license](https://creativecommons.org/publicdomain/zero/1.0/). See [`LICENSE`](https://github.com/techworkersco/techworkersco.github.io/blob/master/LICENSE).

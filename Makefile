@@ -31,7 +31,7 @@ incr:
 
 .PHONY: preview
 preview:
-	bundle exec jekyll serve
+	bundle exec jekyll serve --watch
 
 .PHONY: pub
 pub:

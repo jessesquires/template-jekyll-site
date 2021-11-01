@@ -50,8 +50,8 @@ sass:
   style: compressed
 
 # Metadata
-title: 'TITLE'
-description: 'Website description'
+title: 'My Website'
+description: 'My website description'
 url: 'https://www.example.com'
 logo: logo.png
 favicon: /favicon.ico
@@ -59,9 +59,9 @@ timezone: America/Los_Angeles
 
 # Author
 author:
-  name: 'AUTHOR'
-  twitter: TWITTER_USERNAME
-  avatar: avatar.jpg
+  name: 'Jane Doe'
+  twitter: jane_doe
+  avatar: logo.png
 
 # Data
 feeds:
