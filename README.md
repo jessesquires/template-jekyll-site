@@ -1,4 +1,4 @@
-# template-jekyll-site
+# template-jekyll-site [![CI](https://github.com/jessesquires/template-jekyll-site/actions/workflows/ci.yml/badge.svg)](https://github.com/jessesquires/template-jekyll-site/actions/workflows/ci.yml)
 
 *Template repository for Jekyll websites*
 
