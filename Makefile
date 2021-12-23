@@ -1,3 +1,5 @@
+export JEKYLL_ENV=development
+
 .DEFAULT: build
 
 .PHONY: build
@@ -27,6 +29,7 @@ watch:
 
 .PHONY: incr
 incr:
+	bundle exec jekyll build
 	bundle exec jekyll build --watch --incremental
 
 .PHONY: preview
