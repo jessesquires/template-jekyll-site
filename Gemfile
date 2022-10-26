@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '~> 2.7'
 
-gem 'jekyll', '~> 4.0'
+gem 'jekyll', '~> 4.3'
 gem 'jekyll-sitemap'
 # gem 'jekyll-paginate'
 # gem 'jekyll-paginate-v2'
