@@ -1,6 +1,8 @@
 # Dependencies
 plugins:
   - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-email-protect
   #- jekyll-paginate
   #- jekyll-paginate-v2
 
