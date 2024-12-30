@@ -1,5 +1,5 @@
 # Documentation for all configuration options:
-# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
 version: 2
 updates:
@@ -7,13 +7,16 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    labels: []
 
   - package-ecosystem: bundler
     directory: "/"
     schedule:
       interval: "weekly"
+    labels: []
 
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "weekly"
+    labels: []
