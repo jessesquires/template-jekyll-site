@@ -78,6 +78,6 @@ $ make preview
 
 ## License
 
-This work is released under the [CC0 1.0 Universal (CC0 1.0) license](https://creativecommons.org/publicdomain/zero/1.0/). See [`LICENSE`](https://github.com/techworkersco/techworkersco.github.io/blob/master/LICENSE).
+This work is released under the [CC0 1.0 Universal (CC0 1.0) license](https://creativecommons.org/publicdomain/zero/1.0/). See [`LICENSE`](https://github.com/jessesquires/template-jekyll-site/blob/main/LICENSE).
 
 All code is licensed under an [MIT License](https://opensource.org/licenses/MIT).
