@@ -36,7 +36,7 @@ jobs:
 
       # https://github.com/peter-evans/create-pull-request
       - name: create pull request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: "[automated] update bundle dependencies"
           title: "[automated] update bundle dependencies"
@@ -65,7 +65,7 @@ jobs:
 
       # https://github.com/peter-evans/create-pull-request
       - name: create pull request
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           commit-message: "[automated] update npm dependencies"
           title: "[automated] update npm dependencies"
