@@ -11,6 +11,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
+    ffi (1.17.4)
     ffi (1.17.4-arm64-darwin)
     ffi (1.17.4-x86_64-darwin)
     ffi (1.17.4-x86_64-linux-gnu)
@@ -89,4 +90,4 @@ DEPENDENCIES
   jekyll-sitemap
 
 BUNDLED WITH
-  4.0.19
+  4.1.0.beta1
